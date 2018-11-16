@@ -1,0 +1,36 @@
+See the end of this message for details on invoking 
+just-in-time (JIT) debugging instead of this dialog box.
+
+************** Exception Text **************
+System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Image.get_RawFormat()
+   at System.Drawing.Image.Save(MemoryStream stream)
+   at System.Drawing.Image.System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo si, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at DKS.Training.Electric.Singleton.ProjectData.SerializeToString[TData](TData settings) in F:\GIT_2509\02_02 Cloud Trainning\DKS Training Electric\Singleton\ProjectData.cs:line 86
+   at DKS.Training.Electric.StaticMethodHelper.ImportExportHelper.ExportProjectTo(String ExportFilePath) in F:\GIT_2509\02_02 Cloud Trainning\DKS Training Electric\StaticMethodHelper\ImportExportHelper.cs:line 47
+   at DKS.Training.Electric.StaticMethodHelper.ImportExportHelper.AutoSyncToClient() in F:\GIT_2509\02_02 Cloud Trainning\DKS Training Electric\StaticMethodHelper\ImportExportHelper.cs:line 106
+   at DKS.Training.Electric.TrainingControl.lvNewModule_MouseClick(Object sender, MouseEventArgs e) in F:\GIT_2509\02_02 Cloud Trainning\DKS Training Electric\TrainingControl.cs:line 180
+   at System.Windows.Forms.Control.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.ListView.WmReflectNotify(Message& m)
+   at System.Windows.Forms.ListView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+
+************** Loaded Assemblies **************
+mscorlib
+    Assembly Version: 4.0.0.0
+    Win32 Version: 4.7.3056.0 built by: NET472REL1
+    CodeBase: file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll
+----------------------------------------
+DKS.Simulator
+    Assembly Version: 1.0.0.0
+    Win32 Version: 1.0.0.0
+    CodeBase: file:///C:/Users/Administrator/Desktop/Debug_1411/Debug%2014.11/DKS.Simulator.exe
+----------------------------------------
